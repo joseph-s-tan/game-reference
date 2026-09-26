@@ -2,6 +2,7 @@
 
 > Static extracted data from Prophesy of Pendor QoL Plus v2. This index does not describe the current save or in-game availability.
 
+- [Game reference gallery](/game-reference/): All published game references.
 - [Explorer home](/game-reference/pendor/): Overview and section navigation.
 - [Troop explorer](/game-reference/pendor/troops/): Search all 1203 troop definitions.
 - [Item explorer](/game-reference/pendor/items/): Search all 1573 item definitions.
