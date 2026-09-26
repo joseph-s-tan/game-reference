@@ -1,0 +1,26 @@
+# Fallen Horse
+
+- ID: `itm_fallen_horse`
+- Type: horse
+- Value: 205
+- Item index: 237
+- Meaning: static module definition; troop references are inventory candidates, not guaranteed equipment or current-save observations.
+
+## Display stats
+
+- Weight: 0.0
+- Abundance: 1
+- Horse armor: 90
+- Horse hit points: 500
+- Horse speed: 36
+- Horse maneuver: 40
+- Difficulty: 10
+- Horse charge: 40
+
+## Troop definitions listing this item
+
+1 troop definitions overall, including 1 in the upgrade-linked slice.
+
+- [Fallen Veteran](/game-reference/pendor/troop/trp_fallen_veteran/)
+
+Source: `item_kinds1.txt` line 973; SHA-256 `f6d6e44be92fd01da8ee5f7ad27bcf1f895ff56f35fb334202d79fe8120af0f0`; catalog `pop-3.9.5-items-bf637fe0c08f`.

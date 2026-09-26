@@ -1,0 +1,37 @@
+# find item cheat
+
+- ID: `trp_find_item_cheat__1198`
+- Level: 0
+- Troop index: 1198
+- Meaning: static module definition; inventory entries are candidates, not guaranteed equipment or current-save observations.
+
+## Attributes
+
+- Strength: 15
+- Agility: 12
+- Intelligence: 9
+- Charisma: 6
+
+## Upgrades from
+
+- None listed
+
+## Upgrades to
+
+- None listed
+
+## Nonzero skills
+
+- Trade: 2
+- Prisoner Management: 1
+- Inventory Management: 10
+
+## Nonzero proficiencies
+
+- None listed
+
+## Listed inventory candidates
+
+- None listed
+
+Source: `troops.txt` line 8389; SHA-256 `907f377c4f39ba0d2f88ff4725b697b74b3cd420aebdc258dc307ef19bbc88d2`; catalog `pop-3.9.5-troops-20b28feea551`.

@@ -1,0 +1,23 @@
+# Zitta Bascinet
+
+- ID: `itm_zitta_bascinet`
+- Type: head armor
+- Value: 2210
+- Item index: 917
+- Meaning: static module definition; troop references are inventory candidates, not guaranteed equipment or current-save observations.
+
+## Display stats
+
+- Weight: 2.75
+- Abundance: 4
+- Head armor: 57
+- Difficulty: 15
+
+## Troop definitions listing this item
+
+2 troop definitions overall, including 2 in the upgrade-linked slice.
+
+- [Adventurer](/game-reference/pendor/troop/trp_adventurer/)
+- [Hero Adventurer](/game-reference/pendor/troop/trp_hero_adventurer/)
+
+Source: `item_kinds1.txt` line 3932; SHA-256 `f6d6e44be92fd01da8ee5f7ad27bcf1f895ff56f35fb334202d79fe8120af0f0`; catalog `pop-3.9.5-items-bf637fe0c08f`.

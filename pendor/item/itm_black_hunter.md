@@ -1,0 +1,30 @@
+# Black Caparisoned Hunter
+
+- ID: `itm_black_hunter`
+- Type: horse
+- Value: 1013
+- Item index: 176
+- Meaning: static module definition; troop references are inventory candidates, not guaranteed equipment or current-save observations.
+
+## Display stats
+
+- Weight: 0.0
+- Abundance: 60
+- Horse armor: 35
+- Horse hit points: 130
+- Horse speed: 40
+- Horse maneuver: 36
+- Difficulty: 3
+- Horse charge: 18
+
+## Troop definitions listing this item
+
+5 troop definitions overall, including 4 in the upgrade-linked slice.
+
+- [Lord Leonius](/game-reference/pendor/troop/trp_knight_5_20/)
+- [Pendor Cavalry](/game-reference/pendor/troop/trp_pendor_cavalry/)
+- [Pendor Mtd. Man-at-Arms](/game-reference/pendor/troop/trp_pendor_mtdmanatarms/)
+- [Rogue Baccus Squire](/game-reference/pendor/troop/trp_squire_southern/)
+- [Young Baccus Adventurer](/game-reference/pendor/troop/trp_young_southern/)
+
+Source: `item_kinds1.txt` line 709; SHA-256 `f6d6e44be92fd01da8ee5f7ad27bcf1f895ff56f35fb334202d79fe8120af0f0`; catalog `pop-3.9.5-items-bf637fe0c08f`.

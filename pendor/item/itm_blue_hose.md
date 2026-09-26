@@ -1,0 +1,107 @@
+# Blue Hose
+
+- ID: `itm_blue_hose`
+- Type: foot armor
+- Value: 8
+- Item index: 736
+- Meaning: static module definition; troop references are inventory candidates, not guaranteed equipment or current-save observations.
+
+## Display stats
+
+- Weight: 1.0
+- Abundance: 100
+- Leg armor: 5
+
+## Troop definitions listing this item
+
+87 troop definitions overall, including 3 in the upgrade-linked slice.
+
+- [Agrean](/game-reference/pendor/troop/trp_town_10_horse_merchant/)
+- [Belligerent Drunk](/game-reference/pendor/troop/trp_belligerent_drunk/)
+- [Constable Valorian](/game-reference/pendor/troop/trp_order_constable/)
+- [Count Arnoldus](/game-reference/pendor/troop/trp_knight_2_9/)
+- [Count Carolus](/game-reference/pendor/troop/trp_knight_2_4/)
+- [Count Clovis](/game-reference/pendor/troop/trp_knight_2_5/)
+- [Count Draco](/game-reference/pendor/troop/trp_knight_2_10/)
+- [Count Ivanus](/game-reference/pendor/troop/trp_knight_2_8/)
+- [Count Otto](/game-reference/pendor/troop/trp_knight_2_6/)
+- [Count Raban](/game-reference/pendor/troop/trp_knight_2_12/)
+- [Count Stephan](/game-reference/pendor/troop/trp_knight_2_7/)
+- [Dalantriel](/game-reference/pendor/troop/trp_town_18_horse_merchant/)
+- [Duke Aldemar](/game-reference/pendor/troop/trp_knight_2_1/)
+- [Duke Alexis](/game-reference/pendor/troop/trp_knight_2_3/)
+- [Empire Citizen](/game-reference/pendor/troop/trp_empire_citizen/)
+- [Empire Levy Recruit](/game-reference/pendor/troop/trp_empire_recruit/)
+- [Gerry](/game-reference/pendor/troop/trp_town_7_armorer/)
+- [Havadar the Bard](/game-reference/pendor/troop/trp_tavern_traveler_4/)
+- [High Steward Savis](/game-reference/pendor/troop/trp_town_15_seneschal/)
+- [Hired Assassin](/game-reference/pendor/troop/trp_hired_assassin/)
+- [Hydrina](/game-reference/pendor/troop/trp_town_1_horse_merchant/)
+- [King Gregory IV](/game-reference/pendor/troop/trp_kingdom_2_lord/)
+- [King Ulric](/game-reference/pendor/troop/trp_kingdom_1_lord/)
+- [Lord Burgundus](/game-reference/pendor/troop/trp_knight_2_18/)
+- [Lord Chonrad](/game-reference/pendor/troop/trp_knight_2_17/)
+- [Lord Faramund](/game-reference/pendor/troop/trp_knight_2_19/)
+- [Lord Gairebold](/game-reference/pendor/troop/trp_knight_2_20/)
+- [Lord Gustov](/game-reference/pendor/troop/trp_knight_2_15/)
+- [Lord Hengist](/game-reference/pendor/troop/trp_knight_2_16/)
+- [Madame Ursula](/game-reference/pendor/troop/trp_kingdom_2_pretender/)
+- [Malik Ordu](/game-reference/pendor/troop/trp_castle_17_seneschal/)
+- [Merchant of Janos](/game-reference/pendor/troop/trp_empire_merchant/)
+- [Murdering Arsonist](/game-reference/pendor/troop/trp_37_arsonist/)
+- [Musician](/game-reference/pendor/troop/trp_musician_male/)
+- [Musician](/game-reference/pendor/troop/trp_musician_female/)
+- [Musician](/game-reference/pendor/troop/trp_musician_male_rav/)
+- [Musician](/game-reference/pendor/troop/trp_musician_female_rav/)
+- [Musician](/game-reference/pendor/troop/trp_musician_male_dshar/)
+- [Musician](/game-reference/pendor/troop/trp_musician_female_dshar/)
+- [Musician](/game-reference/pendor/troop/trp_musician_male_fier/)
+- [Musician](/game-reference/pendor/troop/trp_musician_female_fier/)
+- [Musician](/game-reference/pendor/troop/trp_musician_male_emp/)
+- [Musician](/game-reference/pendor/troop/trp_musician_female_emp/)
+- [Nervous Man](/game-reference/pendor/troop/trp_fugitive/)
+- [Orisa one-hand](/game-reference/pendor/troop/trp_town_14_horse_merchant/)
+- [Pendor Recruit](/game-reference/pendor/troop/trp_pendor_recruit/)
+- [Ravenstern Lady in waiting](/game-reference/pendor/troop/trp_ravenstern_lady_in_waiting/)
+- [Red Brotherhood Thief](/game-reference/pendor/troop/trp_rb_thief/)
+- [Rough-Looking Character](/game-reference/pendor/troop/trp_fight_promoter/)
+- [Samaja Pradha Amdalar](/game-reference/pendor/troop/trp_town_14_mayor/)
+- [Samaja Pradha Buljan](/game-reference/pendor/troop/trp_town_18_mayor/)
+- [Samaja Pradha Shivad](/game-reference/pendor/troop/trp_town_10_mayor/)
+- [Seneschal Alberic](/game-reference/pendor/troop/trp_castle_37_seneschal/)
+- [Sir Darlion of Pendor](/game-reference/pendor/troop/trp_kingdom_1_pretender/)
+- [Squire Thomas](/game-reference/pendor/troop/trp_town_4_mayor/)
+- [Steward Barrigan](/game-reference/pendor/troop/trp_town_4_seneschal/)
+- [Steward Dorwerth](/game-reference/pendor/troop/trp_castle_27_seneschal/)
+- [Steward Wythen](/game-reference/pendor/troop/trp_town_16_seneschal/)
+- [Townsman](/game-reference/pendor/troop/trp_town_walker_1/)
+- [Townsman](/game-reference/pendor/troop/trp_town_walker_rav_1/)
+- [Townsman](/game-reference/pendor/troop/trp_khergit_townsman/)
+- [Townsman](/game-reference/pendor/troop/trp_town_walker_fier_1/)
+- [Townsman](/game-reference/pendor/troop/trp_town_walker_emp_1/)
+- [Townsman](/game-reference/pendor/troop/trp_spy_walker_1/)
+- [Townswoman](/game-reference/pendor/troop/trp_town_walker_2/)
+- [Townswoman](/game-reference/pendor/troop/trp_town_walker_rav_2/)
+- [Townswoman](/game-reference/pendor/troop/trp_khergit_townswoman/)
+- [Townswoman](/game-reference/pendor/troop/trp_town_walker_fier_2/)
+- [Townswoman](/game-reference/pendor/troop/trp_town_walker_emp_2/)
+- [Townswoman](/game-reference/pendor/troop/trp_spy_walker_2/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_1/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_2/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_rav_1/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_rav_2/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_dshar_1/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_dshar_2/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_fier_1/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_fier_2/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_emp_1/)
+- [Villager](/game-reference/pendor/troop/trp_village_walker_emp_2/)
+- [{!}Town 10 Craftsman](/game-reference/pendor/troop/trp_town_10_master_craftsman/)
+- [{!}Town 14 Craftsman](/game-reference/pendor/troop/trp_town_14_master_craftsman/)
+- [{!}Town 15 Craftsman](/game-reference/pendor/troop/trp_town_15_master_craftsman/)
+- [{!}Town 16 Craftsman](/game-reference/pendor/troop/trp_town_16_master_craftsman/)
+- [{!}Town 17 Craftsman](/game-reference/pendor/troop/trp_town_17_master_craftsman/)
+- [{!}Town 18 Craftsman](/game-reference/pendor/troop/trp_town_18_master_craftsman/)
+- [{!}Town 4 Craftsman](/game-reference/pendor/troop/trp_town_4_master_craftsman/)
+
+Source: `item_kinds1.txt` line 3157; SHA-256 `f6d6e44be92fd01da8ee5f7ad27bcf1f895ff56f35fb334202d79fe8120af0f0`; catalog `pop-3.9.5-items-bf637fe0c08f`.
