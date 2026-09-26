@@ -1,0 +1,44 @@
+# BeeTV Women's 50 (WTA, week 9)
+
+- **Tour:** WTA
+- **Week:** 9
+- **Category:** 20 — Future (Futures / ITF)
+- **Country:** Kazakhstan (KZ)
+- **Zone:** 6 Middle East
+- **Surface:** Hard [inferred]
+- **Draw:** 32 singles, 16 doubles
+- **Purse:** $50,000
+- **Tax on prize:** 15% main draw, 10% qualifying
+- **Field strength:** TopPresence 0.45
+- **Wildcards:** —
+- **Seeds:** 16
+- **Qualifying:** 3 rounds; points 3 / 2 / 1 / 0 (qualified, then losses from the last qualifying round back)
+- **Source:** ATPWTA Patch Tour.WTA.ini [Tournament117_BeeTVWomens50]; ATPWTA Patch TourCategory.WTA.ini [Category20]
+
+## Points and prize money by result
+
+| Result | Points | Prize | Net of tax |
+|---|---:|---:|---:|
+| Winner | 15 | $9,119 | $7,751 |
+| Lost final | 12 | $4,863 | $4,134 |
+| Lost semifinal | 8 | $2,659 | $2,260 |
+| Lost quarterfinal | 6 | $1,520 | $1,292 |
+| Lost round of 16 | 3 | $911 | $774 |
+| Lost round of 32 | 1 | $533 | $453 |
+
+## One-way fare to this event by home zone
+
+| Home zone | Fare |
+|---|---:|
+| 1 North America | 1000 |
+| 2 Central America | 1300 |
+| 3 South America | 1500 |
+| 4 Africa | 800 |
+| 5 Europe | 600 |
+| 6 Middle East | 300 |
+| 7 Asia | 400 |
+| 8 Oceania | 1400 |
+
+## Other Futures / ITF events in week 9
+
+- [SMT CUP](119-smt-cup.md) — Argentina, Clay

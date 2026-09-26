@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TE4 Season Planner</title>
+<meta name="description" content="Plan a Tennis Elbow 4 / TEM2 World Tour season from the XKT, ATPWTA Patch and Realistic Stats mod files: tournaments, training and rest weeks, travel fares, points and prize money.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="alternate" type="text/plain" href="llms.txt" title="LLM index">
+</head>
+<body>
+<div class="topbar">
+  <div class="brand"><span class="ball"></span><h1>TE4 Season Planner</h1></div>
+  <nav><a href="/game-reference/">← Game references</a><a href="./" class="active">Planner</a><a href="explore/">Calendar</a><a href="explore/rules.html">Rules &amp; data</a><a href="llms.txt">llms.txt</a></nav>
+  <span class="spacer"></span>
+  <span class="small muted" style="display:flex;align-items:center;gap:6px">Career now
+    <input type="number" id="cw-year" min="1970" max="2100" style="width:70px" aria-label="Current season"> wk
+    <input type="number" id="cw-week" min="1" max="52" style="width:52px" aria-label="Current week">
+    <span id="cw-src"></span></span>
+  <button class="btn ghost" id="theme" title="Toggle light/dark">◐</button>
+</div>
+
+<div class="layout">
+  <main style="display:flex;flex-direction:column;gap:12px;min-width:0">
+    <div class="plans" id="plans" role="tablist" aria-label="Plans"></div>
+
+    <section class="card">
+      <div class="filters">
+        <div class="row">
+          <label class="field">Tour<select id="c-tour"><option>ATP</option><option>WTA</option></select></label>
+          <label class="field">Season<input type="number" id="c-year" min="1970" max="2100" style="width:80px"></label>
+          <label class="field">Coach Center<select id="c-home"></select></label>
+          <label class="field">Circuit<select id="c-circuit"><option value="pro">Pro</option><option value="junior">Junior</option></select></label>
+          <label class="field">Show events<select id="f-zone">
+            <option value="all">Everywhere</option>
+            <option value="home">Home zone only</option>
+            <option value="600">Fare ≤ 600 from home</option>
+            <option value="800">Fare ≤ 800 from home</option>
+            <option value="1000">Fare ≤ 1000 from home</option>
+          </select></label>
+          <span class="spacer" style="flex:1"></span>
+          <label class="field">Start from<select id="template"><option value="">Guide template…</option><option value="y1-europe">Year 1 — Europe</option><option value="y1-namerica">Year 1 — North America</option><option value="y1-mideast">Year 1 — Middle East</option></select></label>
+          <button class="btn" id="clear">Clear plan</button>
+        </div>
+        <div><h3 style="margin-bottom:5px">Tiers</h3><div class="chipset" id="tiers"></div></div>
+        <div><h3 style="margin-bottom:5px">Surfaces</h3><div class="chipset" id="surfs"></div></div>
+        <p class="small muted" style="margin:0">Click an event to add it to the week; click again to remove it. ⓘ opens full details. Weeks without a tournament count as training unless you mark them Rest. Hatched weeks are inside the registration lockout.</p>
+      </div>
+    </section>
+
+    <section class="card"><div class="weeks" id="weeks"></div></section>
+  </main>
+
+  <aside class="side">
+    <section class="card">
+      <header><h2>Season</h2></header>
+      <div class="body">
+        <div class="stats" id="stats"></div>
+        <p class="small muted" id="rank" style="margin:8px 0 0"></p>
+        <h3 style="margin-top:12px">Surface weeks</h3>
+        <div class="bar" id="surfbar"></div>
+        <div class="legend" id="surflegend"></div>
+      </div>
+    </section>
+    <section class="card">
+      <header><h2>Checks</h2></header>
+      <div class="body"><ul class="checks" id="checks"></ul></div>
+    </section>
+    <section class="card">
+      <header><h2>Trips</h2></header>
+      <div class="body" style="padding:0 6px 6px"><table class="trips" id="trips"></table></div>
+    </section>
+    <section class="card">
+      <header><h2>Export</h2></header>
+      <div class="body" style="display:flex;flex-wrap:wrap;gap:6px">
+        <button class="btn primary" id="x-md">Copy as Markdown</button>
+        <button class="btn" id="x-link">Copy link</button>
+        <button class="btn" id="x-json">Download JSON</button>
+        <button class="btn" id="x-import">Import JSON</button>
+        <input type="file" id="import-file" accept="application/json,.json" hidden>
+      </div>
+    </section>
+    <section class="card">
+      <header><h2>Assumptions</h2></header>
+      <div class="body" style="display:flex;flex-direction:column;gap:10px">
+        <p class="small muted" style="margin:0">The fare matrix is from <code>Money.ini [Plane]</code>. How the game charges a trip is not documented, so these are adjustable until checked against the finances screen.</p>
+        <div class="row" style="display:flex;flex-wrap:wrap;gap:10px">
+          <label class="field">Fares per leg<input type="number" id="s-travelers" min="0" max="10" step="1"></label>
+          <label class="field">Fare multiplier<input type="number" id="s-fareMult" min="0" max="5" step="0.1"></label>
+          <label class="field">Stay out across gaps ≤<input type="number" id="s-maxGap" min="0" max="8" step="1"></label>
+        </div>
+        <label class="small"><input type="checkbox" id="s-returnHome"> Charge the flight home after each trip</label>
+        <label class="small"><input type="checkbox" id="s-sameCountryFare"> Charge a flight between back-to-back events in the same country</label>
+        <label class="small"><input type="checkbox" id="s-hotel"> Include hotel estimate (BasePrice × nights)</label>
+        <div class="row" style="display:flex;flex-wrap:wrap;gap:10px">
+          <label class="field">Nights / week<input type="number" id="s-hotelNights" min="0" max="7" step="1"></label>
+          <label class="field">Hotel multiplier<input type="number" id="s-hotelMult" min="0" max="10" step="0.5"></label>
+        </div>
+        <h3>Rule thresholds</h3>
+        <div class="row" style="display:flex;flex-wrap:wrap;gap:10px">
+          <label class="field">Lockout weeks<input type="number" id="s-lockWeeks" min="0" max="8"></label>
+          <label class="field">Rest every<input type="number" id="s-restEvery" min="4" max="20"></label>
+          <label class="field">Max gap<input type="number" id="s-motivationGap" min="2" max="12"></label>
+          <label class="field">Max streak<input type="number" id="s-maxStreak" min="1" max="8"></label>
+        </div>
+        <details><summary class="small">Fare matrix (row = from, column = to)</summary><div class="tablewrap"><table class="trips" id="fare-matrix"></table></div></details>
+      </div>
+    </section>
+  </aside>
+</div>
+
+<footer class="foot">Unofficial fan reference for Tennis Elbow 4 and Tennis Elbow Manager 2 (Mana Games). Calendar data is extracted from the XKT, ATPWTA Patch, and ATP Realistic Stats V2 mods, with the local typo fixes listed on the <a href="explore/rules.html">Rules page</a>. Not affiliated with Mana Games or the mod authors.</footer>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Event details">
+  <header><h2 id="d-title" style="flex:1"></h2><button class="btn ghost" id="d-close" aria-label="Close">✕</button></header>
+  <div class="content" id="d-content"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script type="module" src="assets/planner.js"></script>
+</body>
+</html>

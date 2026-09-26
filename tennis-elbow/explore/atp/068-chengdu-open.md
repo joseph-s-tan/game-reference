@@ -1,0 +1,44 @@
+# Chengdu Open (ATP, week 38)
+
+- **Tour:** ATP
+- **Week:** 38
+- **Category:** 7 — TET250 (250)
+- **Country:** China (CN)
+- **Zone:** 7 Asia
+- **Surface:** Hard; asset “01141 Chengdu ATP 250”; SurfaceSpeed 0.3 [mod-data]
+- **Draw:** 28 singles, 16 doubles
+- **Purse:** $419,470
+- **Tax on prize:** 25% main draw, 15% qualifying
+- **Field strength:** TopPresence 0.3
+- **Wildcards:** 3
+- **Seeds:** 8
+- **Qualifying:** 3 rounds; points 12 / 6 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Source:** ATPWTA Patch Tour.ATP.ini [Tournament068_ChengduOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category07]
+
+## Points and prize money by result
+
+| Result | Points | Prize | Net of tax |
+|---|---:|---:|---:|
+| Winner | 250 | $41,145 | $30,859 |
+| Lost final | 150 | $29,500 | $22,125 |
+| Lost semifinal | 90 | $21,000 | $15,750 |
+| Lost quarterfinal | 45 | $14,000 | $10,500 |
+| Lost round of 16 | 20 | $9,000 | $6,750 |
+| Lost round of 32 | 0 | $5,415 | $4,061 |
+
+## One-way fare to this event by home zone
+
+| Home zone | Fare |
+|---|---:|
+| 1 North America | 1500 |
+| 2 Central America | 1800 |
+| 3 South America | 2000 |
+| 4 Africa | 1500 |
+| 5 Europe | 1000 |
+| 6 Middle East | 400 |
+| 7 Asia | 250 |
+| 8 Oceania | 800 |
+
+## Other 250 events in week 38
+
+- [Zhuhai Championships](069-zhuhai-championships.md) — China, Synthetic

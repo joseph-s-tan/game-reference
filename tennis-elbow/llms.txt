@@ -1,0 +1,140 @@
+# TE4 Season Planner
+
+> Reference data for planning a Tennis Elbow 4 World Tour career (including Tennis Elbow Manager 2 mode) under the XKT mod profile, with the ATPWTA Patch and ATP Realistic Stats V2. Extracted from the installed mod files: TE4-ModdingSDK → XKT → ScoreBoardsByStef → ATPWTA Patch → ATP Realistic Stats V2. 470 ATP and 534 WTA events.
+
+Values marked mod-data are read directly from ini files; values marked inferred follow a stated rule in rules.md. Travel costs, registration windows, and point tables are explained in rules.md. Guide heuristics (rest, motivation, fatigue) are separate from game data.
+
+## Core
+
+- [Rules and data](/game-reference/tennis-elbow/explore/rules.md): fare matrix, zones, category point tables, tax, wildcards, field strength, inferences, data issues, source hashes
+- [ATP calendar by week](/game-reference/tennis-elbow/explore/atp-calendar.md): every ATP event with tier, country, zone, surface, draw, and winner points
+- [WTA calendar by week](/game-reference/tennis-elbow/explore/wta-calendar.md): the same for WTA
+- [Career guide tables](/game-reference/tennis-elbow/explore/guide-tables.md): the travel-cost and surface tables from the TEM2 career guide, regenerated from the calendar
+
+## Events
+
+- [Bank of China Hong Kong Tennis Open (ATP, week 1)](/game-reference/tennis-elbow/explore/atp/002-bank-of-china-hong-kong-tennis-open.md): TET250, Hong Kong, China, Hard
+- [Brisbane International (ATP, week 1)](/game-reference/tennis-elbow/explore/atp/001-brisbane-international.md): TET250, Australia, Synthetic
+- [ASB CLASSIC (ATP, week 2)](/game-reference/tennis-elbow/explore/atp/004-asb-classic.md): TET250, New Zealand, Synthetic
+- [Adelaïde International (ATP, week 2)](/game-reference/tennis-elbow/explore/atp/003-adelaide-international.md): TET250, Australia, Synthetic
+- [Australian Open (ATP, week 3)](/game-reference/tennis-elbow/explore/atp/005-australian-open.md): GrandSlam, Australia, Synthetic
+- [Open Sud de France (ATP, week 5)](/game-reference/tennis-elbow/explore/atp/007-open-sud-de-france.md): TET250, France, Hard
+- [Cordoba Open (ATP, week 6)](/game-reference/tennis-elbow/explore/atp/009-cordoba-open.md): TET250, Argentina, Clay
+- [Dallas Open (ATP, week 6)](/game-reference/tennis-elbow/explore/atp/008-dallas-open.md): TET250, United States, Hard
+- [Open 13 Provence (ATP, week 6)](/game-reference/tennis-elbow/explore/atp/010-open-13-provence.md): TET250, France, Synthetic (indoor)
+- [ABN AMRO World Tennis Tournament (ATP, week 7)](/game-reference/tennis-elbow/explore/atp/011-abn-amro-world-tennis-tournament.md): TET500, Netherlands, Hard
+- [Argentina Open (ATP, week 7)](/game-reference/tennis-elbow/explore/atp/013-argentina-open.md): TET250, Argentina, Clay
+- [Delray Beach Open by Vitacost.com (ATP, week 7)](/game-reference/tennis-elbow/explore/atp/012-delray-beach-open-by-vitacost-com.md): TET250, United States, Synthetic
+- [Rio Open presented by Claro (ATP, week 8)](/game-reference/tennis-elbow/explore/atp/014-rio-open-presented-by-claro.md): TET500, Brazil, Clay
+- [Mifel Open (ATP, week 8)](/game-reference/tennis-elbow/explore/atp/016-mifel-open.md): TET250, Mexico, Hard
+- [Qatar ExxonMobil Open (ATP, week 8)](/game-reference/tennis-elbow/explore/atp/015-qatar-exxonmobil-open.md): TET250, Qatar, Hard
+- [Abierto Mexicano Telcel (ATP, week 9)](/game-reference/tennis-elbow/explore/atp/018-abierto-mexicano-telcel.md): TET500, Mexico, Hard
+- [Dubai Duty Free Tennis Championships (ATP, week 9)](/game-reference/tennis-elbow/explore/atp/017-dubai-duty-free-tennis-championships.md): TET500, United Arab Emirates, Hard
+- [Chile Dove Men+Care Open (ATP, week 9)](/game-reference/tennis-elbow/explore/atp/019-chile-dove-men-care-open.md): TET250, Chile, Clay
+- [BNP Paribas Open (ATP, week 10)](/game-reference/tennis-elbow/explore/atp/020-bnp-paribas-open.md): MasterSeries, United States, Hard
+- [Miami Open (ATP, week 12)](/game-reference/tennis-elbow/explore/atp/021-miami-open.md): MasterSeries, United States, Hard
+- [Grand Prix Hassan II (ATP, week 14)](/game-reference/tennis-elbow/explore/atp/023-grand-prix-hassan-ii.md): TET250, Morocco, Clay
+- [Millenium Estoril Open (ATP, week 14)](/game-reference/tennis-elbow/explore/atp/024-millenium-estoril-open.md): TET250, Portugal, Clay
+- [U.S.Men's Clay Court Championship (ATP, week 14)](/game-reference/tennis-elbow/explore/atp/022-u-s-men-s-clay-court-championship.md): TET250, United States, Clay
+- [Rolex Monte-Carlo Masters (ATP, week 15)](/game-reference/tennis-elbow/explore/atp/025-rolex-monte-carlo-masters.md): MasterSeries, Monaco, Clay
+- [Barcelona Open Banc Sabadell (ATP, week 16)](/game-reference/tennis-elbow/explore/atp/026-barcelona-open-banc-sabadell.md): TET500, Spain, Clay
+- [BMW Open by American Express (ATP, week 16)](/game-reference/tennis-elbow/explore/atp/028-bmw-open-by-american-express.md): TET250, Germany, Clay
+- [Brd Bucharest Open (ATP, week 16)](/game-reference/tennis-elbow/explore/atp/027-brd-bucharest-open.md): TET250, Romania, Clay
+- [Mutua Madrid Open (ATP, week 17)](/game-reference/tennis-elbow/explore/atp/029-mutua-madrid-open.md): MasterSeries, Spain, Clay
+- [Internazionali BNL d'Italia (ATP, week 19)](/game-reference/tennis-elbow/explore/atp/030-internazionali-bnl-d-italia.md): MasterSeries, Italy, Clay
+- [Gonet Geneva Open (ATP, week 21)](/game-reference/tennis-elbow/explore/atp/031-gonet-geneva-open.md): TET250, Switzerland, Clay
+- [Open Parc Auvergne-Rhône-Alpes Lyon (ATP, week 21)](/game-reference/tennis-elbow/explore/atp/032-open-parc-auvergne-rhone-alpes-lyon.md): TET250, France, Clay
+- [Roland Garros (ATP, week 22)](/game-reference/tennis-elbow/explore/atp/033-roland-garros.md): GrandSlam, France, Clay
+- [Boss Open (ATP, week 24)](/game-reference/tennis-elbow/explore/atp/035-boss-open.md): TET250, Germany, Grass
+- [Libema Open (ATP, week 24)](/game-reference/tennis-elbow/explore/atp/034-libema-open.md): TET250, Netherlands, Grass
+- [Cinch Championships (ATP, week 25)](/game-reference/tennis-elbow/explore/atp/037-cinch-championships.md): TET500, United Kingdom, Grass
+- [Noventi Open (ATP, week 25)](/game-reference/tennis-elbow/explore/atp/036-noventi-open.md): TET500, Germany, Grass
+- [Mallorca Open (ATP, week 26)](/game-reference/tennis-elbow/explore/atp/038-mallorca-open.md): TET250, Spain, Grass
+- [Nature Valley International (ATP, week 26)](/game-reference/tennis-elbow/explore/atp/039-nature-valley-international.md): TET250, United Kingdom, Grass
+- [The Championships, Wimbledon (ATP, week 27)](/game-reference/tennis-elbow/explore/atp/040-the-championships-wimbledon.md): GrandSlam, United Kingdom, Grass
+- [Hamburg European Open (ATP, week 29)](/game-reference/tennis-elbow/explore/atp/041-hamburg-european-open.md): TET500, Germany, Clay
+- [Hall of Fame Open (ATP, week 29)](/game-reference/tennis-elbow/explore/atp/042-hall-of-fame-open.md): TET250, United States, Grass
+- [Swedish Open (ATP, week 29)](/game-reference/tennis-elbow/explore/atp/043-swedish-open.md): TET250, Sweden, Clay
+- [Swiss Open Gstaad (ATP, week 29)](/game-reference/tennis-elbow/explore/atp/044-swiss-open-gstaad.md): TET250, Switzerland, Clay
+- [Generali Open (ATP, week 30)](/game-reference/tennis-elbow/explore/atp/046-generali-open.md): TET250, Austria, Clay
+- [Plava Laguna Croatia Open Umag (ATP, week 30)](/game-reference/tennis-elbow/explore/atp/047-plava-laguna-croatia-open-umag.md): TET250, Croatia, Clay
+- [Truist Atlanta Open (ATP, week 30)](/game-reference/tennis-elbow/explore/atp/045-truist-atlanta-open.md): TET250, United States, Hard
+- [Citi Open (ATP, week 31)](/game-reference/tennis-elbow/explore/atp/061-citi-open.md): TET500, United States, Hard
+- [Rogers Cup Montreal (ATP, week 32)](/game-reference/tennis-elbow/explore/atp/062-rogers-cup-montreal.md): MasterSeries, Canada, Hard
+- [Rogers Cup Toronto (ATP, week 32)](/game-reference/tennis-elbow/explore/atp/063-rogers-cup-toronto.md): MasterSeries, Canada, Hard
+- [Western & Southern Open (ATP, week 33)](/game-reference/tennis-elbow/explore/atp/064-western-southern-open.md): MasterSeries, United States, Hard
+- [Winston-Salem Open (ATP, week 34)](/game-reference/tennis-elbow/explore/atp/065-winston-salem-open.md): TET250, United States, Hard
+- [US Open (ATP, week 35)](/game-reference/tennis-elbow/explore/atp/066-us-open.md): GrandSlam, United States, Hard
+- [Laver Cup (ATP, week 38)](/game-reference/tennis-elbow/explore/atp/070-laver-cup.md): TET500, United States, Hard
+- [Chengdu Open (ATP, week 38)](/game-reference/tennis-elbow/explore/atp/068-chengdu-open.md): TET250, China, Hard
+- [Zhuhai Championships (ATP, week 38)](/game-reference/tennis-elbow/explore/atp/069-zhuhai-championships.md): TET250, China, Synthetic
+- [China Open (ATP, week 39)](/game-reference/tennis-elbow/explore/atp/071-china-open.md): TET500, China, Synthetic
+- [Rakuten Japan Open (ATP, week 39)](/game-reference/tennis-elbow/explore/atp/072-rakuten-japan-open.md): TET500, Japan, Hard
+- [Rolex Shanghai Masters (ATP, week 40)](/game-reference/tennis-elbow/explore/atp/073-rolex-shanghai-masters.md): MasterSeries, China, Hard
+- [Astana Open (ATP, week 42)](/game-reference/tennis-elbow/explore/atp/074-astana-open.md): TET250, Kazakhstan, Hard
+- [European Open (ATP, week 42)](/game-reference/tennis-elbow/explore/atp/075-european-open.md): TET250, Belgium, Hard (indoor)
+- [Erste Bank Open (ATP, week 43)](/game-reference/tennis-elbow/explore/atp/076-erste-bank-open.md): TET500, Austria, Hard (indoor)
+- [Swiss Indoors Basel (ATP, week 43)](/game-reference/tennis-elbow/explore/atp/077-swiss-indoors-basel.md): TET500, Switzerland, Hard
+- [Rolex Paris Masters (ATP, week 44)](/game-reference/tennis-elbow/explore/atp/078-rolex-paris-masters.md): MasterSeries, France, Hard
+- [Intrum Stockholm Open (ATP, week 45)](/game-reference/tennis-elbow/explore/atp/079-intrum-stockholm-open.md): TET250, Sweden, Hard (indoor)
+- [Moselle Open (ATP, week 45)](/game-reference/tennis-elbow/explore/atp/080-moselle-open.md): TET250, France, Hard (indoor)
+- [Next Gen ATP Finals (ATP, week 46)](/game-reference/tennis-elbow/explore/atp/082-next-gen-atp-finals.md): TET250, Italy, Hard (indoor)
+- [Nitto ATP Finals (ATP, week 46)](/game-reference/tennis-elbow/explore/atp/081-nitto-atp-finals.md): MasterCup, Italy, Hard
+- [Brisbane International (WTA, week 1)](/game-reference/tennis-elbow/explore/wta/001-brisbane-international.md): Premier, Australia, Synthetic
+- [ASB Classic (WTA, week 1)](/game-reference/tennis-elbow/explore/wta/002-asb-classic.md): IntlWTA, New Zealand, Synthetic
+- [Adelaide International (WTA, week 2)](/game-reference/tennis-elbow/explore/wta/003-adelaide-international.md): Premier, Australia, Synthetic
+- [Hobart International (WTA, week 2)](/game-reference/tennis-elbow/explore/wta/004-hobart-international.md): IntlWTA, Australia, Synthetic
+- [Australian Open (WTA, week 3)](/game-reference/tennis-elbow/explore/wta/005-australian-open.md): GrandSlam, Australia, Synthetic
+- [Generali Ladies Linz (WTA, week 5)](/game-reference/tennis-elbow/explore/wta/006-generali-ladies-linz.md): Premier, Austria, Hard
+- [Thailand Open (WTA, week 5)](/game-reference/tennis-elbow/explore/wta/007-thailand-open.md): IntlWTA, Thailand, Hard
+- [Mubadala Abu Dhabi Open (WTA, week 6)](/game-reference/tennis-elbow/explore/wta/008-mubadala-abu-dhabi-open.md): Premier, United Arab Emirates, Hard
+- [Qatar Total Open (WTA, week 7)](/game-reference/tennis-elbow/explore/wta/009-qatar-total-open.md): PremierM, Qatar, Hard
+- [Dubai Duty Free Championships (WTA, week 8)](/game-reference/tennis-elbow/explore/wta/010-dubai-duty-free-championships.md): PremierM, United Arab Emirates, Hard
+- [San Diego Open (WTA, week 9)](/game-reference/tennis-elbow/explore/wta/011-san-diego-open.md): Premier, United States, Hard
+- [ATX Open (WTA, week 9)](/game-reference/tennis-elbow/explore/wta/012-atx-open.md): IntlWTA, United States, Hard
+- [BNP Paribas Open (WTA, week 10)](/game-reference/tennis-elbow/explore/wta/013-bnp-paribas-open.md): PremierM, United States, Hard
+- [Miami Open by Itau (WTA, week 12)](/game-reference/tennis-elbow/explore/wta/014-miami-open-by-itau.md): PremierM, United States, Hard
+- [Credit One Charleston Open (WTA, week 14)](/game-reference/tennis-elbow/explore/wta/015-credit-one-charleston-open.md): Premier, United States, Clay
+- [Copa Colsanitas presented by Zurich (WTA, week 14)](/game-reference/tennis-elbow/explore/wta/016-copa-colsanitas-presented-by-zurich.md): IntlWTA, Colombia, Clay
+- [Porsche Tennis Grand Prix (WTA, week 16)](/game-reference/tennis-elbow/explore/wta/018-porsche-tennis-grand-prix.md): Premier, Germany, Clay
+- [Mutua Madrid Open (WTA, week 17)](/game-reference/tennis-elbow/explore/wta/019-mutua-madrid-open.md): PremierM, Spain, Clay
+- [Internazionali BNL d'Italia (WTA, week 19)](/game-reference/tennis-elbow/explore/wta/020-internazionali-bnl-d-italia.md): Premier5, Italy, Clay
+- [Grand Prix Son Altesse Royale La Princesse Lalla Meryem (WTA, week 21)](/game-reference/tennis-elbow/explore/wta/022-grand-prix-son-altesse-royale-la-princesse-lalla-meryem.md): IntlWTA, Monaco, Clay
+- [Internationaux de Strasbourg (WTA, week 21)](/game-reference/tennis-elbow/explore/wta/021-internationaux-de-strasbourg.md): IntlWTA, France, Clay
+- [Roland Garros (WTA, week 22)](/game-reference/tennis-elbow/explore/wta/023-roland-garros.md): GrandSlam, France, Clay
+- [Aegon Open Nottingham (WTA, week 24)](/game-reference/tennis-elbow/explore/wta/024-aegon-open-nottingham.md): IntlWTA, United Kingdom, Grass
+- [Libema Open (WTA, week 24)](/game-reference/tennis-elbow/explore/wta/025-libema-open.md): IntlWTA, Netherlands, Grass
+- [Berlin Ladies Open (WTA, week 25)](/game-reference/tennis-elbow/explore/wta/026-berlin-ladies-open.md): Premier, Germany, Grass
+- [Aegon Classic Birmingham (WTA, week 25)](/game-reference/tennis-elbow/explore/wta/027-aegon-classic-birmingham.md): IntlWTA, United Kingdom, Grass
+- [Aegon International Eastbourne (WTA, week 26)](/game-reference/tennis-elbow/explore/wta/028-aegon-international-eastbourne.md): Premier, United Kingdom, Grass
+- [Bad Homburg Open (WTA, week 26)](/game-reference/tennis-elbow/explore/wta/029-bad-homburg-open.md): IntlWTA, Germany, Grass
+- [The Championships, Wimbledon (WTA, week 27)](/game-reference/tennis-elbow/explore/wta/030-the-championships-wimbledon.md): GrandSlam, United Kingdom, Grass
+- [33rd Palermo Ladies Open (WTA, week 29)](/game-reference/tennis-elbow/explore/wta/032-33rd-palermo-ladies-open.md): IntlWTA, Italy, Clay
+- [Hungarian Grand Prix (WTA, week 29)](/game-reference/tennis-elbow/explore/wta/031-hungarian-grand-prix.md): IntlWTA, Hungary, Clay
+- [Hamburg European Open (WTA, week 30)](/game-reference/tennis-elbow/explore/wta/033-hamburg-european-open.md): IntlWTA, Germany, Clay
+- [Livesport Prague Open (WTA, week 30)](/game-reference/tennis-elbow/explore/wta/034-livesport-prague-open.md): IntlWTA, Czech Republic, Synthetic
+- [Mubadala Citi DC Open (WTA, week 31)](/game-reference/tennis-elbow/explore/wta/048-mubadala-citi-dc-open.md): Premier, United States, Hard
+- [Rogers Cup Montreal (WTA, week 32)](/game-reference/tennis-elbow/explore/wta/050-rogers-cup-montreal.md): PremierM, Canada, Hard
+- [Rogers Cup Toronto (WTA, week 32)](/game-reference/tennis-elbow/explore/wta/049-rogers-cup-toronto.md): PremierM, Canada, Hard
+- [Western & Southern Open (WTA, week 33)](/game-reference/tennis-elbow/explore/wta/051-western-southern-open.md): PremierM, United States, Hard
+- [Abierto GNP Seguros (WTA, week 34)](/game-reference/tennis-elbow/explore/wta/052-abierto-gnp-seguros.md): Premier, Mexico, Hard
+- [Tennis in the Land (WTA, week 34)](/game-reference/tennis-elbow/explore/wta/053-tennis-in-the-land.md): IntlWTA, United States, Hard
+- [US Open (WTA, week 35)](/game-reference/tennis-elbow/explore/wta/054-us-open.md): GrandSlam, United States, Hard
+- [Guadalajara Open (WTA, week 37)](/game-reference/tennis-elbow/explore/wta/056-guadalajara-open.md): Premier, Mexico, Hard
+- [Jasmin Open Tunisia (WTA, week 37)](/game-reference/tennis-elbow/explore/wta/057-jasmin-open-tunisia.md): IntlWTA, Andorra, Hard
+- [Korea Open (WTA, week 38)](/game-reference/tennis-elbow/explore/wta/058-korea-open.md): Premier, South Korea, Hard
+- [Ningbo Open (WTA, week 38)](/game-reference/tennis-elbow/explore/wta/059-ningbo-open.md): IntlWTA, China, Hard
+- [China Open (WTA, week 39)](/game-reference/tennis-elbow/explore/wta/060-china-open.md): PremierM, China, Synthetic
+- [Wuhan Open (WTA, week 41)](/game-reference/tennis-elbow/explore/wta/061-wuhan-open.md): PremierM, China, Hard
+- [Zhengzhou Open (WTA, week 42)](/game-reference/tennis-elbow/explore/wta/062-zhengzhou-open.md): Premier, China, Hard
+- [Kinoshita Group Japan Open (WTA, week 42)](/game-reference/tennis-elbow/explore/wta/063-kinoshita-group-japan-open.md): IntlWTA, Japan, Synthetic
+- [Japan Women's Open Tennis (WTA, week 43)](/game-reference/tennis-elbow/explore/wta/064-japan-women-s-open-tennis.md): Premier, Japan, Synthetic
+- [Guangzhou International Open (WTA, week 43)](/game-reference/tennis-elbow/explore/wta/065-guangzhou-international-open.md): IntlWTA, China, Synthetic
+- [Hong Kong Tennis Open (WTA, week 44)](/game-reference/tennis-elbow/explore/wta/068-hong-kong-tennis-open.md): IntlWTA, Hong Kong, China, Hard
+- [Jiangxi Open (WTA, week 44)](/game-reference/tennis-elbow/explore/wta/066-jiangxi-open.md): IntlWTA, China, Hard
+- [Mérida Open Akron (WTA, week 44)](/game-reference/tennis-elbow/explore/wta/067-merida-open-akron.md): IntlWTA, Mexico, Hard
+- [WTA Finals (WTA, week 45)](/game-reference/tennis-elbow/explore/wta/069-wta-finals.md): MasterCup, China, Synthetic (indoor)
+
+## Optional
+
+- Challenger, ITF, and junior events each have a page under explore/atp/ and explore/wta/; the calendar files link every one.

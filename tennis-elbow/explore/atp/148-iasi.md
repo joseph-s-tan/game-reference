@@ -1,0 +1,46 @@
+# Iasi (ATP, week 28)
+
+- **Tour:** ATP
+- **Week:** 28
+- **Category:** 19 — Challenger (Challenger / 125)
+- **Country:** Romania (RO)
+- **Zone:** 5 Europe
+- **Surface:** Clay [inferred]
+- **Draw:** 32 singles, 16 doubles
+- **Purse:** $88,520
+- **Tax on prize:** 20% main draw, 10% qualifying
+- **Field strength:** TopPresence 0.45
+- **Wildcards:** —
+- **Seeds:** 8
+- **Qualifying:** 3 rounds; points 4 / 3 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Source:** ATPWTA Patch Tour.ATP.ini [Tournament148_Iasi]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category19]
+
+## Points and prize money by result
+
+| Result | Points | Prize | Net of tax |
+|---|---:|---:|---:|
+| Winner | 75 | $12,250 | $9,800 |
+| Lost final | 45 | $7,200 | $5,760 |
+| Lost semifinal | 27 | $4,260 | $3,408 |
+| Lost quarterfinal | 13 | $2,480 | $1,984 |
+| Lost round of 16 | 6 | $1,460 | $1,168 |
+| Lost round of 32 | 0 | $885 | $708 |
+
+## One-way fare to this event by home zone
+
+| Home zone | Fare |
+|---|---:|
+| 1 North America | 750 |
+| 2 Central America | 1400 |
+| 3 South America | 1800 |
+| 4 Africa | 800 |
+| 5 Europe | 300 |
+| 6 Middle East | 600 |
+| 7 Asia | 900 |
+| 8 Oceania | 1500 |
+
+## Other Challenger / 125 events in week 28
+
+- [Nur-Sultan 3](149-nur-sultan-3.md) — Kazakhstan, Hard
+- [Amersfoort](151-amersfoort.md) — Netherlands, Clay
+- [Todi](150-todi.md) — Italy, Clay
