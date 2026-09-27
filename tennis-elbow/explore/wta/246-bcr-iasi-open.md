@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 6 / 4 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 379; qualifying ≈ rank 565. 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament246_BCRIasiOpen]; ATPWTA Patch TourCategory.WTA.ini [Category17]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** 3
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 12 / 6 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 157 (≈195 pts); qualifying ≈ rank 365 (≈54 pts). 21 direct places = draw 28 − 4 qualifiers − 3 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament008_DallasOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category07]
 
 **Locally corrected:** Country was AU in the mod file. Dallas, Texas. XKT had US.

@@ -188,3 +188,6 @@ table.data tr:hover td { background: var(--panel-2); }
 }
 
 .foot { max-width: 1100px; margin: 8px auto 24px; padding: 0 16px; font-size: 12px; color: var(--ink-3); }
+.ev.reach-qualifying { border-style: dashed; }
+.ev.reach-borderline { border-style: dashed; }
+.ev.reach-out { opacity: .45; }

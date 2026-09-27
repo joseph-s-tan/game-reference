@@ -13,6 +13,7 @@
 - **Wildcards:** 3
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 20 / 12 / 8 / 1 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 56; qualifying ≈ rank 128. 25 direct places = draw 32 − 4 qualifiers − 3 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament026_BerlinLadiesOpen]; ATPWTA Patch TourCategory.WTA.ini [Category07]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 1 / 0 / 0 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 705; qualifying ≈ rank 961. 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 4 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament081_Fort-de-FranceW15sITFWorldTennisTour]; ATPWTA Patch TourCategory.WTA.ini [Category22]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** 5
 - **Seeds:** 32
 - **Qualifying:** 2 rounds; points 30 / 20 / 1 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 88; qualifying ≈ rank 142. 79 direct places = draw 96 − 12 qualifiers − 5 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament013_BNPParibasOpen]; ATPWTA Patch TourCategory.WTA.ini [Category02]
 
 ## Points and prize money by result

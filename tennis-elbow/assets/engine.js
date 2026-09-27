@@ -79,6 +79,7 @@ export const DEFAULT_SETTINGS = {
   hotelNights: 7,
   hotelMult: 1,
   lockWeeks: 4,        // registration closes this many weeks ahead
+  myRank: null,        // the player's entry rank, for main-draw / qualifying estimates
   careerYear: null,    // the career's current season and week; null = use catalog.career (local builds)
   careerWeek: null,
   restEvery: 10,       // guide: rest at least half a week every 10 weeks
@@ -175,6 +176,17 @@ export function evaluate(plan, catalog, settingsIn = {}) {
     }
   }
 
+  // Entry: compare the player's entry rank with the modeled cutoffs.
+  if (settings.myRank) {
+    for (const p of picks) {
+      p.entryStatus = entryStatus(p.event, settings.myRank);
+      const en = p.event.entry;
+      if (p.entryStatus === 'out') add('bad', p.week, `${p.event.name}: entry rank ${settings.myRank} is probably outside even the qualifying draw (model cutoff ≈ ${en.qualCutoffRank || en.cutoffRank}).`, 'entry model estimate');
+      else if (p.entryStatus === 'qualifying') add('warn', p.week, `${p.event.name}: probably qualifying, not main draw (model main-draw cutoff ≈ ${en.cutoffRank}).`, 'entry model estimate');
+      else if (p.entryStatus === 'borderline') add('info', p.week, `${p.event.name}: borderline for direct entry (model cutoff ≈ ${en.cutoffRank}).`, 'entry model estimate');
+    }
+  }
+
   // Rest rule: every run of `restEvery` weeks needs a rest week (guide heuristic).
   let runStart = 1;
   for (let w = 1; w <= 53; w++) {
@@ -242,6 +254,16 @@ export function evaluate(plan, catalog, settingsIn = {}) {
   const order = { bad: 0, warn: 1, info: 2 };
   checks.sort((a, b) => order[a.level] - order[b.level] || (a.week ?? 99) - (b.week ?? 99));
   return { picks, trips, state, pickAt, checks, totals, settings };
+}
+
+/** Where an entry rank stands against an event's modeled cutoffs. */
+export function entryStatus(event, myRank) {
+  const en = event.entry;
+  if (!en || !myRank) return null;
+  if (myRank <= en.cutoffRank * 0.9) return 'direct';
+  if (myRank <= en.cutoffRank * 1.1) return 'borderline';
+  if (en.qualCutoffRank && myRank <= en.qualCutoffRank) return 'qualifying';
+  return 'out';
 }
 
 /** Current career position: the viewer's own setting, else what the local build read from Player.log. */

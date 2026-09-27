@@ -13,6 +13,7 @@
 - **Wildcards:** 8
 - **Seeds:** 32
 - **Qualifying:** 3 rounds; points 60 / 50 / 40 / 2 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 110; qualifying ≈ rank 245. 104 direct places = draw 128 − 16 qualifiers − 8 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament054_USOpen]; ATPWTA Patch TourCategory.WTA.ini [Category01]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** 3
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 12 / 6 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 250 (≈123 pts); qualifying ≈ rank 390 (≈44 pts). 25 direct places = draw 32 − 4 qualifiers − 3 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament015_QatarExxonMobilOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category07]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 20 / 10 / 5 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 24 (≈1024 pts); qualifying ≈ rank 49 (≈651 pts). 7 direct places = draw 8 − 1 qualifiers − 0 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament070_LaverCup]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category05]
 
 ## Points and prize money by result

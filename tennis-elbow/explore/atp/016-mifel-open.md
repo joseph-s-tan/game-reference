@@ -13,6 +13,7 @@
 - **Wildcards:** 3
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 12 / 6 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 250 (≈123 pts); qualifying ≈ rank 390 (≈44 pts). 21 direct places = draw 28 − 4 qualifiers − 3 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament016_MifelOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category07]
 
 ## Points and prize money by result

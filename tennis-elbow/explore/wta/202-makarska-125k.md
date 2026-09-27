@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 6 / 4 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 210; qualifying ≈ rank 391. 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament202_Makarska125K]; ATPWTA Patch TourCategory.WTA.ini [Category17]
 
 **Locally corrected:** Category was 24 in the mod file. Category 24 is not defined in TourCategory.WTA. The six other WTA 125K events (32 draw, $125,000 purse) are all category 17. Wrong in XKT too.

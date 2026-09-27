@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 3 / 2 / 1 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 335; qualifying ≈ rank 549. 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament289_W35NakhonSiThammarat]; ATPWTA Patch TourCategory.WTA.ini [Category21]
 
 ## Points and prize money by result

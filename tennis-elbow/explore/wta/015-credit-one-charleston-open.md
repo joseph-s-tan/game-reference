@@ -13,6 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 2 rounds; points 12 / 8 / 1 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 88; qualifying ≈ rank 152. 44 direct places = draw 56 − 8 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament015_CreditOneCharlestonOpen]; ATPWTA Patch TourCategory.WTA.ini [Category06]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 25 / 12 / 8 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 49 (≈651 pts); qualifying ≈ rank 77 (≈390 pts). 49 direct places = draw 56 − 3 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament062_RogersCupMontreal]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category03]
 
 Held only in some years: YearModulo -2 offset 0, family Canada (inferred rule; held in 2023).

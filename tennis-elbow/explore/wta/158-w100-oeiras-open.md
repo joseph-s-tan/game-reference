@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 5 / 3 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 192; qualifying ≈ rank 320. 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament158_W100OEIRASOPEN]; ATPWTA Patch TourCategory.WTA.ini [Category18]
 
 ## Points and prize money by result

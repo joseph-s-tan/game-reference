@@ -13,6 +13,7 @@
 - **Wildcards:** 5
 - **Seeds:** 32
 - **Qualifying:** 2 rounds; points 16 / 8 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 79 (≈378 pts); qualifying ≈ rank 127 (≈233 pts). 79 direct places = draw 96 − 12 qualifiers − 5 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament073_RolexShanghaiMasters]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category02]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 2 rounds; points 10 / 4 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 102 (≈291 pts); qualifying ≈ rank 155 (≈196 pts). 38 direct places = draw 48 − 6 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament061_CitiOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category04]
 
 ## Points and prize money by result

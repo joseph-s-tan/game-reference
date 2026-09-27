@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 1 / 0 / 0 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 320; qualifying ≈ rank 457. 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament245_W15LakewoodCA]; ATPWTA Patch TourCategory.WTA.ini [Category22]
 
 **Locally corrected:** Country was TN in the mod file. Lakewood, California (the name says CA). Wrong in XKT too; found by the city audit.

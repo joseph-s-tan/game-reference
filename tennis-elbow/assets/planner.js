@@ -1,5 +1,5 @@
 import {
-  activeInYear, evaluate, resultOptions, weekMonday, fare, rankFor, careerNow, DEFAULT_SETTINGS,
+  activeInYear, evaluate, resultOptions, weekMonday, fare, rankFor, careerNow, entryStatus, DEFAULT_SETTINGS,
 } from './engine.js';
 
 const STORE = 'te-planner-v1';
@@ -134,7 +134,7 @@ function renderControls(p) {
   for (const [k, v] of Object.entries(S.settings)) {
     const el = document.getElementById('s-' + k);
     if (!el) continue;
-    if (el.type === 'checkbox') el.checked = !!v; else el.value = v;
+    if (el.type === 'checkbox') el.checked = !!v; else el.value = v ?? '';
   }
   const c = careerNow(catalog, S.settings);
   $('#cw-year').value = c?.year ?? '';
@@ -146,7 +146,9 @@ function chip(e, p, picked) {
   const home = Number(p.home);
   const f = fare(catalog.fares, home, e.zone);
   const title = `${e.name} — ${e.type} (cat ${e.category}), ${surfName(e.surface.type)}${e.indoor ? ' indoor' : ''}, ${e.countryName}, ${zoneName(e.zone)}; draw ${e.drawSingles}; fare from home ${f}` + (e.weeks === 2 ? '; two weeks' : '');
-  return `<span class="ev${picked ? ' picked' : ''}${e.zone === home ? ' home' : ''}" title="${esc(title)}">
+  const st = entryStatus(e, S.settings.myRank);
+  const cut = e.entry ? `; est. main-draw cutoff rank ${e.entry.cutoffRank}${e.entry.qualCutoffRank ? `, qualifying ${e.entry.qualCutoffRank}` : ''}` : '';
+  return `<span class="ev${picked ? ' picked' : ''}${e.zone === home ? ' home' : ''}${st ? ' reach-' + st : ''}" title="${esc(title + cut)}">
     <button class="btn ghost" style="padding:0;border:0;display:inline-flex;gap:6px;align-items:center" data-pick="${e.id}" data-week="${e.week}">
       <span class="dot s-${e.surface.type || 0}"></span><span class="tier">${TIER_SHORT[e.tier]}</span><span class="nm">${esc(e.name)}</span><span class="z">${esc(e.country)}${e.weeks === 2 ? ' ·2w' : ''}</span>
     </button>
@@ -205,8 +207,18 @@ function pickLine(p, pk, leg) {
     <span class="kv">${surfName(pk.event.surface.type)}${pk.event.surface.speed != null ? ` (speed ${pk.event.surface.speed})` : ''}</span>
     ${legTxt ? `<span class="kv">${legTxt}</span>` : ''}
     <span class="kv">Register by <b>wk ${pk.registerBy}</b></span>
+    ${entryTxt(pk)}
     <button class="btn ghost small" data-info="${pk.event.id}">Details</button>
   </div>`;
+}
+
+const ENTRY_LABEL = { direct: ['info', 'Likely direct entry'], borderline: ['warn', 'Borderline'], qualifying: ['warn', 'Likely qualifying'], out: ['bad', 'Likely can’t enter'] };
+function entryTxt(pk) {
+  const en = pk.event.entry;
+  if (!en) return '';
+  const pts = en.cutoffPoints != null ? ` (≈${en.cutoffPoints} pts)` : '';
+  const tag = pk.entryStatus ? ` <span class="flag ${ENTRY_LABEL[pk.entryStatus][0]}">${ENTRY_LABEL[pk.entryStatus][1]}</span>` : '';
+  return `<span class="kv" title="Model estimate from the calendar and category files${en.calibrated ? ', calibrated' : ''}">Cutoff ≈ <b>#${en.cutoffRank}</b>${pts}</span>${tag}`;
 }
 
 function renderSummary(p, ev) {
@@ -255,6 +267,7 @@ function openInfo(id) {
       <dt>Qualifying</dt><dd>${cat.qualifRounds ? `${cat.qualifRounds} rounds` : '—'}${cat.qualifPoints?.length ? ` · points ${cat.qualifPoints.join(' / ')}` : ''}</dd>
       <dt>Tax</dt><dd>${cat.taxFinal}% main draw, ${cat.taxQualif}% qualifying</dd>
       <dt>Purse</dt><dd>${e.prize ? money(e.prize.total) : '—'}</dd>
+      ${e.entry ? `<dt>Entry (est.)</dt><dd>Main draw ≈ rank <b>${e.entry.cutoffRank}</b>${e.entry.cutoffPoints != null ? ` (≈${e.entry.cutoffPoints} pts)` : ''}${e.entry.qualCutoffRank ? ` · qualifying ≈ rank ${e.entry.qualCutoffRank}${e.entry.qualCutoffPoints != null ? ` (≈${e.entry.qualCutoffPoints} pts)` : ''}` : ''}<br><span class="muted small">${e.entry.direct} direct places = draw ${e.entry.draw} − ${e.entry.qualifiers} qualifiers − ${e.entry.wildcards} wildcards · ${e.entry.weekEvents} same-level event(s) that week</span> <span class="ev-tag">${e.entry.calibrated ? 'model, calibrated' : 'model estimate'}</span></dd>` : ''}
       ${e.year ? `<dt>Years held</dt><dd>${esc(JSON.stringify(e.year))} <span class="ev-tag">inferred</span></dd>` : ''}
     </dl>
     <table class="rounds"><tr><th>Result</th><th>Points</th><th>Prize</th><th>Net</th></tr>
@@ -380,7 +393,7 @@ function bind() {
       S.settings.careerWeek = Math.min(52, Math.max(1, Number($('#cw-week').value) || 0)) || null;
     }
     else if (el.id === 'template') { if (el.value) loadTemplate(el.value); el.value = ''; return; }
-    else if (el.id.startsWith('s-')) { const k = el.id.slice(2); S.settings[k] = el.type === 'checkbox' ? el.checked : Number(el.value); }
+    else if (el.id.startsWith('s-')) { const k = el.id.slice(2); S.settings[k] = el.type === 'checkbox' ? el.checked : k === 'myRank' ? (Number(el.value) || null) : Number(el.value); }
     else if (el.id === 'import-file') {
       const f = el.files?.[0]; if (!f) return;
       f.text().then(txt => { try { const n = JSON.parse(txt); n.id = uid(); S.plans.push(n); S.active = n.id; render(); toast('Plan imported'); } catch { toast('Not a plan file'); } });

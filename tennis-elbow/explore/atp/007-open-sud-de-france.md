@@ -13,6 +13,7 @@
 - **Wildcards:** 3
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 12 / 6 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 63 (≈452 pts); qualifying ≈ rank 135 (≈224 pts). 21 direct places = draw 28 − 4 qualifiers − 3 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament007_OpenSuddeFrance]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category07]
 
 ## Points and prize money by result

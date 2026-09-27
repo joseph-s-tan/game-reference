@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 1 / 0 / 0 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 792 (≈11 pts); qualifying ≈ rank 977 (≈0 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament247_JaponM15]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category22]
 
 ## Points and prize money by result

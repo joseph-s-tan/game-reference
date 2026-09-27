@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 3 / 2 / 1 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 876 (≈6 pts); qualifying ≈ rank 1048 (≈0 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament319_SouthAfricaM25]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category21]
 
 ## Points and prize money by result

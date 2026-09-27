@@ -9,6 +9,7 @@ Values marked mod-data are read directly from ini files; values marked inferred 
 - [Rules and data](/game-reference/tennis-elbow/explore/rules.md): fare matrix, zones, category point tables, tax, wildcards, field strength, inferences, data issues, source hashes
 - [ATP calendar by week](/game-reference/tennis-elbow/explore/atp-calendar.md): every ATP event with tier, country, zone, surface, draw, and winner points
 - [WTA calendar by week](/game-reference/tennis-elbow/explore/wta-calendar.md): the same for WTA
+- [Entry cutoffs](/game-reference/tennis-elbow/explore/entry-cutoffs.md): estimated main-draw and qualifying cutoff ranks (and points) by level, with method and calibration
 - [Career guide tables](/game-reference/tennis-elbow/explore/guide-tables.md): the travel-cost and surface tables from the TEM2 career guide, regenerated from the calendar
 
 ## Events

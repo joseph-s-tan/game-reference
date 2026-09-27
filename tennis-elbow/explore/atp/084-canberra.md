@@ -13,6 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 5 / 3 / 2 / 0 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 320 (≈74 pts); qualifying ≈ rank 390 (≈44 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament084_Canberra]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category18]
 
 **Locally corrected:** Country was TR in the mod file. Canberra, Australia. XKT had AU.

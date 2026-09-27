@@ -13,6 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 30 / 20 / 12 / 1 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 111; qualifying ≈ rank 151. 88 direct places = draw 96 − 4 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament020_InternazionaliBNLdItalia]; ATPWTA Patch TourCategory.WTA.ini [Category04]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** 3
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 16 / 10 / 6 / 1 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 152; qualifying ≈ rank 346. 25 direct places = draw 32 − 4 qualifiers − 3 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament032_33rdPalermoLadiesOpen]; ATPWTA Patch TourCategory.WTA.ini [Category09]
 
 ## Points and prize money by result

@@ -13,6 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 2 rounds; points 30 / 20 / 1 (qualified, then losses from the last qualifying round back)
+- **Entry cutoff (model estimate):** main draw ≈ rank 51; qualifying ≈ rank 83. 45 direct places = draw 56 − 7 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.WTA.ini [Tournament009_QatarTotalOpen]; ATPWTA Patch TourCategory.WTA.ini [Category03]
 
 ## Points and prize money by result
