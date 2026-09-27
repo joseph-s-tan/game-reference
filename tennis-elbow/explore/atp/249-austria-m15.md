@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 1 / 0 / 0 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 975 (≈0 pts); qualifying ≈ rank 1216 (≈0 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 1110 (≈0 pts); qualifying ≈ rank 1824 (≈0 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament249_AustriaM15]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category22]
 
 **Locally corrected:** Country was AU in the mod file. Named Austria M15. XKT had AT.

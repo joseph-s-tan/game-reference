@@ -31,7 +31,7 @@
           <label class="field">Season<input type="number" id="c-year" min="1970" max="2100" style="width:80px"></label>
           <label class="field">Coach Center<select id="c-home"></select></label>
           <label class="field">Circuit<select id="c-circuit"><option value="pro">Pro</option><option value="junior">Junior</option></select></label>
-          <label class="field" title="Your Entry Rank from the game. Used to estimate main-draw vs qualifying entry.">My entry rank<input type="number" id="s-myRank" min="1" max="5000" style="width:80px" placeholder="—"></label>
+          <label class="field" title="Optional fixed Entry Rank. Leave blank to use the projected rank at each event's registration deadline.">My entry rank<input type="number" id="s-myRank" min="1" max="5000" style="width:80px" placeholder="—"></label>
           <label class="field">Show events<select id="f-zone">
             <option value="all">Everywhere</option>
             <option value="home">Home zone only</option>
@@ -62,6 +62,10 @@
         <div class="bar" id="surfbar"></div>
         <div class="legend" id="surflegend"></div>
       </div>
+    </section>
+    <section class="card">
+      <header><h2>Ranking projection</h2></header>
+      <div class="body"><div id="proj"></div><table class="trips" id="proj-table" style="margin-top:8px"></table></div>
     </section>
     <section class="card">
       <header><h2>Checks</h2></header>

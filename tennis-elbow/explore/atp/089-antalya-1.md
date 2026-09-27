@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 5 / 3 / 2 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 185 (≈166 pts); qualifying ≈ rank 323 (≈73 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 182 (≈259 pts); qualifying ≈ rank 314 (≈122 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament089_Antalya1]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category18]
 
 ## Points and prize money by result

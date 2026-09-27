@@ -106,11 +106,12 @@ function eventsForWeek(p, week) {
 
 function render() {
   const p = plan();
-  const ev = evaluate(p, catalog, S.settings);
+  const ev = evaluate(p, catalog, S.settings, S.plans);
   renderPlans(p);
   renderControls(p);
   renderWeeks(p, ev);
   renderSummary(p, ev);
+  renderProjection(p, ev);
   save();
 }
 
@@ -217,7 +218,7 @@ function entryTxt(pk) {
   const en = pk.event.entry;
   if (!en) return '';
   const pts = en.cutoffPoints != null ? ` (≈${en.cutoffPoints} pts)` : '';
-  const tag = pk.entryStatus ? ` <span class="flag ${ENTRY_LABEL[pk.entryStatus][0]}">${ENTRY_LABEL[pk.entryStatus][1]}</span>` : '';
+  const tag = pk.entryStatus ? ` <span class="flag ${ENTRY_LABEL[pk.entryStatus][0]}" title="${pk.entryRankSource === 'set' ? 'Using My entry rank' : `Projected rank at registration: #${pk.entryRank}`}">${ENTRY_LABEL[pk.entryStatus][1]}${pk.entryRankSource === 'projected' ? ` (#${pk.entryRank})` : ''}</span>` : '';
   return `<span class="kv" title="Model estimate from the calendar and category files${en.calibrated ? ', calibrated' : ''}">Cutoff ≈ <b>#${en.cutoffRank}</b>${pts}</span>${tag}`;
 }
 
@@ -242,6 +243,73 @@ function renderSummary(p, ev) {
     const route = [zoneName(Number(p.home)), ...tr.stops.map(s => s.event.name)].concat(S.settings.returnHome ? ['home'] : []).map(esc).join(' → ');
     return `<tr><td class="mono">${tr.start}${tr.end !== tr.start ? '–' + tr.end : ''}</td><td>${route}</td><td class="r mono">${money(tr.fare + tr.hotel)}</td></tr>`;
   }).join('') : '<tr><td class="muted">No trips yet.</td></tr>';
+}
+
+// ---------- ranking projection ----------
+
+const RANK_TICKS = [1, 10, 30, 100, 300, 1000];
+function renderProjection(p, ev) {
+  const pr = ev.projection;
+  const box = $('#proj');
+  const snap = catalog.ranking;
+  if (!snap || snap.tour !== p.tour) {
+    box.innerHTML = `<p class="small muted">Rank projection needs a ${p.tour} ranking export (Rankings → Pro → Singles → Entry → Export). Points by week are still shown in the table below.</p>`;
+  } else box.innerHTML = '';
+  const c = careerNow(catalog, S.settings);
+  const now = c && Number(p.year) === c.year ? c.week : null;
+  const pts = pr.weeks.slice(1);
+  if (!pts.some(w => w.points > 0)) {
+    box.innerHTML += '<p class="small muted">Pick events and set results to project the entry ranking. Weeks already played use the results you set, so record actual results there.</p>';
+    $('#proj-table').innerHTML = '';
+    return;
+  }
+  const maxRank = Math.max(snap?.points.length || 1000, 1000);
+  const W = 320, H = 150, L = 34, R = 8, T = 8, B = 20;
+  const x = w => L + (w - 1) * (W - L - R) / 51;
+  const y = r => T + (Math.log10(r) / Math.log10(maxRank)) * (H - T - B);
+  const ranked = pts.filter(w => w.rank);
+  let path = '', open = false;
+  for (const w of pts) {
+    if (!w.rank) { open = false; continue; }
+    path += `${open ? 'L' : 'M'}${x(w.week).toFixed(1)},${y(w.rank).toFixed(1)}`;
+    open = true;
+  }
+  const grid = RANK_TICKS.filter(t => t <= maxRank).map(t => `<line x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" class="pj-grid"/><text x="${L - 4}" y="${y(t) + 3.5}" class="pj-tick" text-anchor="end">${t}</text>`).join('');
+  const months = [1, 14, 27, 40, 52].map(w => `<text x="${x(w)}" y="${H - 5}" class="pj-tick" text-anchor="middle">wk ${w}</text>`).join('');
+  const nowLine = now ? `<line x1="${x(now)}" x2="${x(now)}" y1="${T}" y2="${H - B}" class="pj-now"/><text x="${x(now) + 3}" y="${T + 9}" class="pj-tick">now</text>` : '';
+  const end = pts[51], peak = ranked.reduce((a, b) => (!a || b.rank < a.rank ? b : a), null);
+  const cur = now ? pts[now - 1] : null;
+  box.innerHTML += `
+    <div class="pj-head small">${cur ? `Now (wk ${now}): <b>${cur.points}</b> pts${cur.rank ? ` ≈ <b>#${cur.rank}</b>` : ''} · ` : ''}End of season: <b>${end.points}</b> pts${end.rank ? ` ≈ <b>#${end.rank}</b>` : ''}${peak ? ` · Peak <b>#${peak.rank}</b> (wk ${peak.week})` : ''}</div>
+    <div class="pj-wrap">
+      <svg viewBox="0 0 ${W} ${H}" class="pj" role="img" aria-label="Projected entry rank by week">
+        ${grid}${months}${nowLine}
+        <path d="${path}" class="pj-line"/>
+        <line class="pj-cross" y1="${T}" y2="${H - B}" x1="-10" x2="-10"/>
+        <circle class="pj-dot" r="4" cx="-10" cy="-10"/>
+        <rect x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent" class="pj-hit"/>
+      </svg>
+      <div class="pj-tip" hidden></div>
+    </div>
+    <p class="small muted" style="margin:6px 0 0">Entry ranking = best ${pr.bestN} results whose event ended in the last 52 weeks${pr.prior ? `, including “${esc(pr.prior)}”` : ' (add a plan for the previous season to carry its points)'}. Rank from the ${esc(snap?.label || '')} export, so it assumes the rest of the tour stands still. Compulsory Slam/1000 zero-pointers are not modeled.</p>`;
+  const svg = box.querySelector('svg'), tip = box.querySelector('.pj-tip');
+  const hit = box.querySelector('.pj-hit'), cross = box.querySelector('.pj-cross'), dot = box.querySelector('.pj-dot');
+  hit.addEventListener('mousemove', evt => {
+    const r = svg.getBoundingClientRect();
+    const sx = (evt.clientX - r.left) * W / r.width;
+    const wk = Math.min(52, Math.max(1, Math.round((sx - L) * 51 / (W - L - R)) + 1));
+    const d = pts[wk - 1];
+    cross.setAttribute('x1', x(wk)); cross.setAttribute('x2', x(wk));
+    if (d.rank) { dot.setAttribute('cx', x(wk)); dot.setAttribute('cy', y(d.rank)); } else dot.setAttribute('cx', -10);
+    tip.hidden = false;
+    tip.innerHTML = `<b>Week ${wk}</b><br>${d.points} pts${d.rank ? ` · #${d.rank}` : ' · unranked'}<br><span class="muted">${d.events} result(s) live</span>`;
+    const left = (x(wk) / W) * r.width;
+    tip.style.left = `${Math.min(r.width - 120, Math.max(0, left + 8))}px`;
+  });
+  hit.addEventListener('mouseleave', () => { tip.hidden = true; cross.setAttribute('x1', -10); cross.setAttribute('x2', -10); dot.setAttribute('cx', -10); });
+  const keys = [...new Set([1, 9, 18, 27, 36, 44, 52, now].filter(Boolean))].sort((a, b) => a - b);
+  $('#proj-table').innerHTML = `<tr><th>Week</th><th class="r">Points</th><th class="r">Rank</th></tr>` +
+    keys.map(k => `<tr${k === now ? ' style="font-weight:600"' : ''}><td>${k}${k === now ? ' (now)' : ''}</td><td class="r mono">${pts[k - 1].points}</td><td class="r mono">${pts[k - 1].rank ? '#' + pts[k - 1].rank : '—'}</td></tr>`).join('');
 }
 
 // ---------- drawer ----------
@@ -317,6 +385,12 @@ function markdown(p, ev) {
   lines.push('', `**Totals:** ${t.events} tournaments (${t.playWeeks} weeks), ${t.trainWeeks} training weeks, ${t.restWeeks} rest weeks, ${t.trips} trips; travel ${money(t.travel + t.hotel)}; ${t.points} points${t.bestN ? ` (best ${t.bestN})` : ''}; net prize ${money(t.prizeNet)}.`, '');
   const s = S.settings;
   lines.push(`**Travel assumptions (unverified in game):** ${s.travelers} fare(s) per leg × ${s.fareMult}; return leg ${s.returnHome ? 'charged' : 'not charged'}; on the road across gaps ≤ ${s.maxGap} weeks; hotel ${s.hotel ? `${s.hotelNights} nights × ${catalog.hotelBasePrice} × ${s.hotelMult}` : 'excluded'}.`, '');
+  const pw = ev.projection.weeks;
+  if (pw.slice(1).some(w => w.points)) {
+    lines.push('**Ranking projection** (best ' + ev.projection.bestN + ' results in 52 weeks):', '', '| Week | Points | Rank |', '|---|---:|---:|');
+    for (const k of [1, 9, 18, 27, 36, 44, 52]) lines.push(`| ${k} | ${pw[k].points} | ${pw[k].rank ? '#' + pw[k].rank : '—'} |`);
+    lines.push('');
+  }
   if (ev.checks.length) {
     lines.push('**Checks:**', '');
     for (const c of ev.checks) lines.push(`- ${c.level === 'bad' ? '⛔' : c.level === 'warn' ? '⚠️' : 'ℹ️'} ${c.week ? `Wk ${c.week}: ` : ''}${c.msg} *(${c.src})*`);
@@ -363,7 +437,7 @@ function bind() {
     else if (b.id === 'plan-rename') { const nm = prompt('Plan name', p.name); if (nm) { p.name = nm; render(); } }
     else if (b.id === 'plan-del') { if (confirm(`Delete “${p.name}”?`)) { S.plans = S.plans.filter(x => x.id !== p.id); S.active = S.plans[0].id; render(); } }
     else if (b.id === 'clear') { if (confirm('Clear every pick and rest week in this plan?')) { p.picks = {}; p.rest = []; render(); } }
-    else if (b.id === 'x-md') copy(markdown(p, evaluate(p, catalog, S.settings)), 'Markdown copied');
+    else if (b.id === 'x-md') copy(markdown(p, evaluate(p, catalog, S.settings, S.plans)), 'Markdown copied');
     else if (b.id === 'x-link') copy(planLink(p), 'Link copied');
     else if (b.id === 'x-json') download(`${p.name.replace(/[^\w-]+/g, '_')}.json`, JSON.stringify(p, null, 2), 'application/json');
     else if (b.id === 'x-import') $('#import-file').click();

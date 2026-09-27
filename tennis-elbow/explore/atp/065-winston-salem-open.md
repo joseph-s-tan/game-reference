@@ -13,7 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 2 rounds; points 5 / 2 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 98 (≈311 pts); qualifying ≈ rank 169 (≈186 pts). 36 direct places = draw 48 − 8 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 96 (≈375 pts); qualifying ≈ rank 166 (≈272 pts). 36 direct places = draw 48 − 8 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament065_Winston-SalemOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category06]
 
 ## Points and prize money by result

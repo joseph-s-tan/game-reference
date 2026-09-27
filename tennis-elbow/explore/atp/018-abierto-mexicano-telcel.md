@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 20 / 10 / 5 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 142 (≈214 pts); qualifying ≈ rank 280 (≈105 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 140 (≈304 pts); qualifying ≈ rank 273 (≈167 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament018_AbiertoMexicanoTelcel]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category05]
 
 ## Points and prize money by result

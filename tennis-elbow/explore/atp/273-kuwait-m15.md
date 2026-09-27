@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 1 / 0 / 0 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 441 (≈38 pts); qualifying ≈ rank 510 (≈30 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 429 (≈60 pts); qualifying ≈ rank 496 (≈40 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament273_KuwaitM15]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category22]
 
 ## Points and prize money by result

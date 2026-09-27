@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 4 / 3 / 2 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 413 (≈41 pts); qualifying ≈ rank 619 (≈21 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 407 (≈69 pts); qualifying ≈ rank 610 (≈25 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament172_St.Tropez]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category19]
 
 ## Points and prize money by result

@@ -13,7 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 2 rounds; points 10 / 4 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 133 (≈225 pts); qualifying ≈ rank 237 (≈130 pts). 24 direct places = draw 32 − 4 qualifiers − 4 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 131 (≈310 pts); qualifying ≈ rank 233 (≈222 pts). 24 direct places = draw 32 − 4 qualifiers − 4 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament071_ChinaOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category04]
 
 ## Points and prize money by result

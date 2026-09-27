@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 5 / 3 / 2 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 248 (≈124 pts); qualifying ≈ rank 388 (≈44 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 245 (≈207 pts); qualifying ≈ rank 378 (≈84 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament103_St.Petersburg2]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category18]
 
 ## Points and prize money by result

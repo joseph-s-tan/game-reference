@@ -191,3 +191,13 @@ table.data tr:hover td { background: var(--panel-2); }
 .ev.reach-qualifying { border-style: dashed; }
 .ev.reach-borderline { border-style: dashed; }
 .ev.reach-out { opacity: .45; }
+.pj-wrap { position: relative; }
+.pj { width: 100%; height: auto; display: block; }
+.pj-grid { stroke: var(--line); stroke-width: 1; }
+.pj-tick { fill: var(--ink-3); font-size: 9px; font-family: var(--sans); }
+.pj-line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.pj-now { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 3; }
+.pj-cross { stroke: var(--ink-3); stroke-width: 1; }
+.pj-dot { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
+.pj-tip { position: absolute; top: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; font-size: 12px; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,.12); min-width: 110px; }
+.pj-head { margin-bottom: 6px; }

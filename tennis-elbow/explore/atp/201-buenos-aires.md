@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 6 / 4 / 2 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 431 (≈39 pts); qualifying ≈ rank 639 (≈20 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 420 (≈65 pts); qualifying ≈ rank 623 (≈24 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament201_BuenosAires]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category17]
 
 ## Points and prize money by result

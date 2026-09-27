@@ -13,7 +13,7 @@
 - **Wildcards:** 3
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 12 / 6 / 2 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 245 (≈127 pts); qualifying ≈ rank 385 (≈45 pts). 21 direct places = draw 28 − 4 qualifiers − 3 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 241 (≈209 pts); qualifying ≈ rank 374 (≈85 pts). 21 direct places = draw 28 − 4 qualifiers − 3 wildcards; 2 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament027_BrdBucharestOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category07]
 
 ## Points and prize money by result

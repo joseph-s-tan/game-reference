@@ -91,7 +91,7 @@ export const DEFAULT_SETTINGS = {
  * Evaluate a plan.
  * plan = { tour, year, home, circuit, picks: {week: {id, result}}, rest: [weeks] }
  */
-export function evaluate(plan, catalog, settingsIn = {}) {
+export function evaluate(plan, catalog, settingsIn = {}, allPlans = []) {
   const settings = { ...DEFAULT_SETTINGS, ...settingsIn };
   const tour = catalog.tours[plan.tour];
   const byId = new Map(tour.events.map(e => [e.id, e]));
@@ -176,14 +176,31 @@ export function evaluate(plan, catalog, settingsIn = {}) {
     }
   }
 
-  // Entry: compare the player's entry rank with the modeled cutoffs.
-  if (settings.myRank) {
-    for (const p of picks) {
-      p.entryStatus = entryStatus(p.event, settings.myRank);
+  // Ranking projection: this plan plus last season's plan on the same tour.
+  const prior = allPlans.find(x => x !== plan && x.tour === plan.tour && Number(x.year) === Number(plan.year) - 1);
+  const projection = projectRanking([...resultsOf(plan, catalog), ...(prior ? resultsOf(prior, catalog) : [])], plan.year,
+    plan.circuit === 'junior' ? tour.bestOf.juniorSingles : tour.bestOf.singles,
+    catalog.ranking?.tour === plan.tour ? catalog.ranking.points : null);
+  projection.prior = prior ? prior.name : null;
+
+  // Entry: compare the entry rank at each registration deadline with the modeled cutoffs.
+  // A fixed "My entry rank" overrides the projection; picks already played are skipped.
+  const nowWeek = career && Number(plan.year) === career.year ? career.week : 0;
+  for (const p of picks) {
+    if (p.week <= nowWeek) continue;
+    const reg = Math.max(1, p.registerBy);
+    const projected = projection.weeks[Math.min(52, reg)]?.rank ?? null;
+    p.entryRank = settings.myRank || projected;
+    p.entryRankSource = settings.myRank ? 'set' : 'projected';
+    if (!p.entryRank) continue;
+    {
+      p.entryStatus = entryStatus(p.event, p.entryRank);
       const en = p.event.entry;
-      if (p.entryStatus === 'out') add('bad', p.week, `${p.event.name}: entry rank ${settings.myRank} is probably outside even the qualifying draw (model cutoff ≈ ${en.qualCutoffRank || en.cutoffRank}).`, 'entry model estimate');
-      else if (p.entryStatus === 'qualifying') add('warn', p.week, `${p.event.name}: probably qualifying, not main draw (model main-draw cutoff ≈ ${en.cutoffRank}).`, 'entry model estimate');
-      else if (p.entryStatus === 'borderline') add('info', p.week, `${p.event.name}: borderline for direct entry (model cutoff ≈ ${en.cutoffRank}).`, 'entry model estimate');
+      if (!p.entryStatus) continue;
+      const who = p.entryRankSource === 'set' ? `entry rank ${p.entryRank}` : `projected rank ${p.entryRank} at registration (wk ${reg})`;
+      if (p.entryStatus === 'out') add('bad', p.week, `${p.event.name}: ${who} is probably outside even the qualifying draw (model cutoff ≈ ${en.qualCutoffRank || en.cutoffRank}).`, 'entry model estimate');
+      else if (p.entryStatus === 'qualifying') add('warn', p.week, `${p.event.name}: ${who} → probably qualifying, not main draw (model cutoff ≈ ${en.cutoffRank}).`, 'entry model estimate');
+      else if (p.entryStatus === 'borderline') add('info', p.week, `${p.event.name}: ${who} is borderline for direct entry (model cutoff ≈ ${en.cutoffRank}).`, 'entry model estimate');
     }
   }
 
@@ -253,7 +270,7 @@ export function evaluate(plan, catalog, settingsIn = {}) {
   };
   const order = { bad: 0, warn: 1, info: 2 };
   checks.sort((a, b) => order[a.level] - order[b.level] || (a.week ?? 99) - (b.week ?? 99));
-  return { picks, trips, state, pickAt, checks, totals, settings };
+  return { picks, trips, state, pickAt, checks, totals, settings, projection };
 }
 
 /** Where an entry rank stands against an event's modeled cutoffs. */
@@ -270,6 +287,38 @@ export function entryStatus(event, myRank) {
 export function careerNow(catalog, settings = {}) {
   if (settings.careerYear && settings.careerWeek) return { year: Number(settings.careerYear), week: Number(settings.careerWeek), source: 'set here' };
   return catalog.career || null;
+}
+
+/** Every result in a plan with its points and the week they start counting (end of the event). */
+export function resultsOf(plan, catalog) {
+  const tour = catalog.tours[plan.tour];
+  const byId = new Map(tour.events.map(e => [e.id, e]));
+  const out = [];
+  for (const [wk, p] of Object.entries(plan.picks || {})) {
+    const e = byId.get(p.id);
+    if (!e) continue;
+    const res = resultFor(e, tour.categories[e.category], p.result);
+    const week = Number(wk) + e.weeks - 1;
+    out.push({ abs: Number(plan.year) * 52 + week, points: res.points, name: e.name, year: Number(plan.year), week });
+  }
+  return out;
+}
+
+/**
+ * Entry-ranking projection for each week of `year`: the best `bestN` results whose
+ * event ended within the previous 52 weeks (the documented ATP/WTA entry ranking).
+ * Mandatory Slam/1000 zero-pointers are not modeled.
+ */
+export function projectRanking(results, year, bestN, snapshot) {
+  const weeks = [null];
+  for (let w = 1; w <= 52; w++) {
+    const abs = Number(year) * 52 + w;
+    const live = results.filter(r => r.abs <= abs && r.abs > abs - 52).map(r => r.points).sort((a, b) => b - a);
+    const counted = bestN ? live.slice(0, bestN) : live;
+    const points = counted.reduce((a, b) => a + b, 0);
+    weeks.push({ week: w, points, events: live.length, rank: points > 0 && snapshot ? rankFor(points, snapshot) : null });
+  }
+  return { weeks, bestN };
 }
 
 /** Rank that `points` would hold in a descending points snapshot (1-based). */

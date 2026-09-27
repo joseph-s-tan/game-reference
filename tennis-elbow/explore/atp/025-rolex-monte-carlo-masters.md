@@ -13,7 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 3 rounds; points 25 / 12 / 8 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 49 (≈651 pts); qualifying ≈ rank 77 (≈390 pts). 49 direct places = draw 56 − 3 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 49 (≈714 pts); qualifying ≈ rank 77 (≈477 pts). 49 direct places = draw 56 − 3 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament025_RolexMonte-CarloMasters]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category03]
 
 ## Points and prize money by result

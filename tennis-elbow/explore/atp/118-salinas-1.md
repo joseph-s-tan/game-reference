@@ -13,7 +13,7 @@
 - **Wildcards:** —
 - **Seeds:** 8
 - **Qualifying:** 3 rounds; points 6 / 4 / 2 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 563 (≈26 pts); qualifying ≈ rank 794 (≈11 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 552 (≈32 pts); qualifying ≈ rank 773 (≈13 pts). 28 direct places = draw 32 − 4 qualifiers − 0 wildcards; 3 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament118_Salinas1]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category17]
 
 ## Points and prize money by result

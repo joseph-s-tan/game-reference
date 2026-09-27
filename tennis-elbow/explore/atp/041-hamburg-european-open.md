@@ -13,7 +13,7 @@
 - **Wildcards:** 4
 - **Seeds:** 16
 - **Qualifying:** 2 rounds; points 10 / 4 / 0 (qualified, then losses from the last qualifying round back)
-- **Entry cutoff (model estimate):** main draw ≈ rank 70 (≈424 pts); qualifying ≈ rank 107 (≈277 pts). 24 direct places = draw 32 − 4 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
+- **Entry cutoff (model estimate):** main draw ≈ rank 67 (≈528 pts); qualifying ≈ rank 105 (≈358 pts). 24 direct places = draw 32 − 4 qualifiers − 4 wildcards; 1 same-level event(s) that week. See entry-cutoffs.md.
 - **Source:** ATPWTA Patch Tour.ATP.ini [Tournament041_HamburgEuropeanOpen]; ATP Realistic Stats V2 TourCategory.ATP.ini [Category04]
 
 ## Points and prize money by result
