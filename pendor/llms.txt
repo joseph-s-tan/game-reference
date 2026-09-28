@@ -2,6 +2,7 @@
 
 > Static extracted data from Prophesy of Pendor QoL Plus v2. This index does not describe the current save or in-game availability.
 
+- [Sher-first play guide](/game-reference/pendor/guide/): Route and relation breakpoints.
 - [Game reference gallery](/game-reference/): All published game references.
 - [Explorer home](/game-reference/pendor/): Overview and section navigation.
 - [Troop explorer](/game-reference/pendor/troops/): Search all 1203 troop definitions.
